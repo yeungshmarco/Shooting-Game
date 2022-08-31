@@ -12,7 +12,6 @@ void setup() {
   } else {
     println(instruct);
   }
-  cursor(CROSS);
 }
 //END setup
 void draw() {
