@@ -1,3 +1,10 @@
+import ddf.minim.*;
+import ddf.minim.analysis.*;
+import ddf.minim.effects.*;
+import ddf.minim.signals.*;
+import ddf.minim.spi.*;
+import ddf.minim.ugens.*;
+//
 Boolean gameStart=false;
 //
 void setup() {
@@ -16,11 +23,17 @@ void setup() {
 //END setup
 void draw() {
   if (gameStart==true) {
+    cursor(CROSS);
     movingGunImage();
+  } else {
+    cursor(ARROW);
   }
 }
 //END draw
 void keyPressed() {
+  if (key=='P' || key=='p') {
+    gameStart=true;
+  }
 }
 //END keyPressed
 void mousePressed() {
