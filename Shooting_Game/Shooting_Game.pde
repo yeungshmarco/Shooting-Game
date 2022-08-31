@@ -5,11 +5,10 @@ import ddf.minim.signals.*;
 import ddf.minim.spi.*;
 import ddf.minim.ugens.*;
 //
-Boolean gameStart=false;
+Boolean gameStart=false, gameMenu=false;
 //
 void setup() {
   fullScreen();
-  background(white);
   println(width, "x", height);
   String ls="Landscape or Square", p="Portrait", DO="Display Orientation:", instruct="Please tilt your device";
   String orientation = (width >= height) ? ls : p;
@@ -22,11 +21,15 @@ void setup() {
 }
 //END setup
 void draw() {
+  gameMenu=true;
+  if (gameMenu==true) {
+    cursor(ARROW);
+    startGameScreen();
+  }
   if (gameStart==true) {
+    gameMenu=false;
     cursor(CROSS);
     movingGunImage();
-  } else {
-    cursor(ARROW);
   }
 }
 //END draw
