@@ -28,6 +28,7 @@ void draw() {
   if (gameStart==true) {
     gameMenu=false;
     cursor(CROSS);
+    gamingScreen();
     movingGunImage();
   }
 }
