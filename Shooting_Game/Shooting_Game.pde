@@ -8,6 +8,7 @@ import ddf.minim.ugens.*;
 Boolean gameStart=false, gameMenu=true;
 //
 void setup() {
+  frameRate(60);
   fullScreen();
   println(width, "x", height);
   String ls="Landscape or Square", p="Portrait", DO="Display Orientation:", instruct="Please tilt your device";
@@ -28,6 +29,7 @@ void draw() {
   if (gameStart==true) {
     gameMenu=false;
     cursor(CROSS);
+    loadingScreen();
     gamingScreen();
     movingGunImage();
   }

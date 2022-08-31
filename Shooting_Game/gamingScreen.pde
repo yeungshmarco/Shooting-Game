@@ -1,9 +1,10 @@
 PImage sniperGun, gamingScreenShootingRange1, gamingScreenShootingBench;
 float sniperGunX, sniperGunY, sniperGunWidth, sniperGunHeight;
 //
+
+//
 void gamingScreen() {
   rotate(degrees360);
-  delay(3000);
   gamingScreenShootingBench = loadImage("gamingScreenShootingBench.jpeg"); //800 x 480
   image(gamingScreenShootingBench, 0, height*1/3, width, height*2/3);
   gamingScreenShootingRange1 = loadImage("gamingScreenShootingRange1.jpeg"); //540 x 360
