@@ -1,3 +1,5 @@
+Boolean gameStart=false;
+//
 void setup() {
   fullScreen();
   background(white);
@@ -14,7 +16,9 @@ void setup() {
 }
 //END setup
 void draw() {
-  movingGunImage();
+  if (gameStart==true) {
+    movingGunImage();
+  }
 }
 //END draw
 void keyPressed() {
