@@ -5,7 +5,7 @@ import ddf.minim.signals.*;
 import ddf.minim.spi.*;
 import ddf.minim.ugens.*;
 //
-Boolean gameStart=false, gameMenu=false;
+Boolean gameStart=false, gameMenu=true;
 //
 void setup() {
   fullScreen();
@@ -21,7 +21,6 @@ void setup() {
 }
 //END setup
 void draw() {
-  gameMenu=true;
   if (gameMenu==true) {
     cursor(ARROW);
     startGameScreen();
