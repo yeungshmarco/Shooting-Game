@@ -5,10 +5,11 @@ import ddf.minim.signals.*;
 import ddf.minim.spi.*;
 import ddf.minim.ugens.*;
 //
+Minim minim;
+//
 Boolean gameStart=false, gameMenu=true;
 //
 void setup() {
-  frameRate(60);
   fullScreen();
   println(width, "x", height);
   String ls="Landscape or Square", p="Portrait", DO="Display Orientation:", instruct="Please tilt your device";
@@ -19,6 +20,10 @@ void setup() {
   } else {
     println(instruct);
   }
+  //Minim
+  minim = new Minim(this);
+  audioSetup();
+  noLoop();
 }
 //END setup
 void draw() {
@@ -29,16 +34,13 @@ void draw() {
   if (gameStart==true) {
     gameMenu=false;
     cursor(CROSS);
-    loadingScreen();
     gamingScreen();
     movingGunImage();
   }
 }
 //END draw
 void keyPressed() {
-  if (key=='P' || key=='p') {
-    gameStart=true;
-  }
+  startGameKeyPressed();
 }
 //END keyPressed
 void mousePressed() {

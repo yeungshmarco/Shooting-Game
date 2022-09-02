@@ -10,3 +10,12 @@ void startGameScreen() {
   image(startGameGun1, 0, height*4/5, width*1/6, height*1/10);
   rotate(degrees360);
 }
+//
+void startGameKeyPressed() {
+  if (gameMenu==true && key=='P' || key=='p') {
+    loadingScreen();
+    delay(5000);
+    gameStart=true;
+    loop();
+  }
+}
