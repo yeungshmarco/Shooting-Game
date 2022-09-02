@@ -23,7 +23,6 @@ void setup() {
   //Minim
   minim = new Minim(this);
   audioSetup();
-  noLoop();
 }
 //END setup
 void draw() {
@@ -31,11 +30,17 @@ void draw() {
     cursor(ARROW);
     startGameScreen();
   }
+  /*if (showLoadingScreen==true) {
+    showLoadingScreen();
+  }*/
   if (gameStart==true) {
+    delay(0);
     gameMenu=false;
+    //showLoadingScreen=false;
     cursor(CROSS);
     gamingScreen();
     movingGunImage();
+    bulletHole();
   }
 }
 //END draw
@@ -44,5 +49,6 @@ void keyPressed() {
 }
 //END keyPressed
 void mousePressed() {
+  firedAmmoMousePressed();
 }
 //END mousePressed
