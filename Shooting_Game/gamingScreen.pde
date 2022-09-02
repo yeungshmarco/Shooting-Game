@@ -21,7 +21,11 @@ void movingGunImage() {
 }
 //
 void firedAmmoMousePressed() {
-  ifGunFiredMousePressed=true;
+  if (mousePressed) {
+    ifGunFiredMousePressed=true;
+  } else {
+    ifGunFiredMousePressed=false;
+  }
 }
 //
 void bulletHole() {
