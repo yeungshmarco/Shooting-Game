@@ -7,7 +7,7 @@ import ddf.minim.ugens.*;
 //
 Minim minim;
 //
-Boolean gameStart=false, gameMenu=true;
+Boolean gameStart=false, inHomeScreen=true;
 //
 void setup() {
   fullScreen();
@@ -26,21 +26,19 @@ void setup() {
 }
 //END setup
 void draw() {
-  if (gameMenu==true) {
+  if (inHomeScreen==true) {
     cursor(ARROW);
-    startGameScreen();
+    homeScreen();
   }
   /*if (showLoadingScreen==true) {
     showLoadingScreen();
   }*/
   if (gameStart==true) {
-    delay(0);
-    gameMenu=false;
+    inHomeScreen=false;
     //showLoadingScreen=false;
     cursor(CROSS);
     gamingScreen();
     movingGunImage();
-    bulletHole();
   }
 }
 //END draw

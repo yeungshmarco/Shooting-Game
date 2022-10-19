@@ -21,25 +21,26 @@ void movingGunImage() {
 }
 //
 void firedAmmoMousePressed() {
-  if (mousePressed) {
-    ifGunFiredMousePressed=true;
-  } else {
-    ifGunFiredMousePressed=false;
+  if (gameStart==true) {
+    if (mouseButton==LEFT) {
+      bulletHole();
+      gunshotSoundEffect.rewind();
+      gunshotSoundEffect.play();
+    } else {
+      gamingScreen();
+      gunshotSoundEffect.pause();
+    }
   }
 }
 //
 void bulletHole() {
-  if (ifGunFiredMousePressed=true) {
-    if (gameStart==true) {
-      bulletHoleX = mouseX;
-      bulletHoleY = mouseY;
-      bulletHoleWidth = width*1/30;
-      bulletHoleHeight = width*1/30;
-      imageMode(CENTER);
-      bulletHole = loadImage("bulletHole.png");
-      image(bulletHole, bulletHoleX, bulletHoleY, bulletHoleWidth, bulletHoleHeight);
-      imageMode(CORNER);
-      loop();
-    }
-  }
+    bulletHoleX = mouseX;
+    bulletHoleY = mouseY;
+    bulletHoleWidth = width*1/30;
+    bulletHoleHeight = width*1/30;
+    imageMode(CENTER);
+    bulletHole = loadImage("bulletHole.png");
+    image(bulletHole, bulletHoleX, bulletHoleY, bulletHoleWidth, bulletHoleHeight);
+    imageMode(CORNER);
+    loop();
 }
