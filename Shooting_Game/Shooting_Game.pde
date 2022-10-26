@@ -23,6 +23,7 @@ void setup() {
   //Minim
   minim = new Minim(this);
   audioSetup();
+  targetVariables();
 }
 //END setup
 void draw() {
@@ -39,6 +40,8 @@ void draw() {
     cursor(CROSS);
     gamingScreen();
     movingGunImage();
+    hitTarget();
+    targets();
   }
 }
 //END draw
@@ -48,5 +51,6 @@ void keyPressed() {
 //END keyPressed
 void mousePressed() {
   firedAmmoMousePressed();
+  ifTargetHit();
 }
 //END mousePressed
