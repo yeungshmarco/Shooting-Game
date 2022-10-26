@@ -1,1 +1,3 @@
 # Shooting-Game
+
+hit rate
