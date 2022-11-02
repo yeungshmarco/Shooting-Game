@@ -39,9 +39,9 @@ void draw() {
     //showLoadingScreen=false;
     cursor(CROSS);
     gamingScreen();
+    targets();
     movingGunImage();
     hitTarget();
-    targets();
   }
 }
 //END draw
