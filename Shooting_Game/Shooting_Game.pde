@@ -41,7 +41,7 @@ void draw() {
     gamingScreen();
     targets();
     movingGunImage();
-    hitTarget();
+    targetPythagorasTheorem();
   }
 }
 //END draw
@@ -51,6 +51,6 @@ void keyPressed() {
 //END keyPressed
 void mousePressed() {
   firedAmmoMousePressed();
-  ifTargetHit();
+  targetHitScore();
 }
 //END mousePressed

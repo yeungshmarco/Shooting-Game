@@ -1,6 +1,7 @@
 float targetX, targetY;
 float target1, target2, target3, target4, target5, target6, target7, target8, target9, target10;
 float xLength, yLength;
+Boolean onTarget1=false, onTarget2=false, onTarget3=false, onTarget4=false, onTarget5=false, onTarget6=false, onTarget7=false, onTarget8=false, onTarget9=false, onTarget10=false;
 Boolean hitTarget1=false, hitTarget2=false, hitTarget3=false, hitTarget4=false, hitTarget5=false, hitTarget6=false, hitTarget7=false, hitTarget8=false, hitTarget9=false, hitTarget10=false;
 
 void targetVariables() {
@@ -36,7 +37,7 @@ void targets() {
   ellipse(targetX, targetY, target10, target10);
 }
 //
-void hitTarget() {
+void targetPythagorasTheorem() {
   if (mouseX > targetX) {
     xLength = mouseX - targetX;
   } else {
@@ -48,9 +49,9 @@ void hitTarget() {
     yLength = targetY - mouseY;
   }
   if (sqrt(sq(xLength)+sq(yLength)) < 200) {
-    hitTarget1=true;
+    onTarget1=true;
   } else {
-    hitTarget1=false;
+    onTarget1=false;
   }
 
   if (mouseX > targetX) {
@@ -64,9 +65,9 @@ void hitTarget() {
     yLength = targetY - mouseY;
   }
   if (sqrt(sq(xLength)+sq(yLength)) < 180) {
-    hitTarget2=true;
+    onTarget2=true;
   } else {
-    hitTarget2=false;
+    onTarget2=false;
   }
 
   if (mouseX > targetX) {
@@ -80,9 +81,9 @@ void hitTarget() {
     yLength = targetY - mouseY;
   }
   if (sqrt(sq(xLength)+sq(yLength)) < 160) {
-    hitTarget3=true;
+    onTarget3=true;
   } else {
-    hitTarget3=false;
+    onTarget3=false;
   }
 
   if (mouseX > targetX) {
@@ -96,9 +97,9 @@ void hitTarget() {
     yLength = targetY - mouseY;
   }
   if (sqrt(sq(xLength)+sq(yLength)) < 140) {
-    hitTarget4=true;
+    onTarget4=true;
   } else {
-    hitTarget4=false;
+    onTarget4=false;
   }
 
   if (mouseX > targetX) {
@@ -112,9 +113,9 @@ void hitTarget() {
     yLength = targetY - mouseY;
   }
   if (sqrt(sq(xLength)+sq(yLength)) < 120) {
-    hitTarget5=true;
+    onTarget5=true;
   } else {
-    hitTarget5=false;
+    onTarget5=false;
   }
 
   if (mouseX > targetX) {
@@ -128,9 +129,9 @@ void hitTarget() {
     yLength = targetY - mouseY;
   }
   if (sqrt(sq(xLength)+sq(yLength)) < 100) {
-    hitTarget6=true;
+    onTarget6=true;
   } else {
-    hitTarget6=false;
+    onTarget6=false;
   }
 
   if (mouseX > targetX) {
@@ -144,9 +145,9 @@ void hitTarget() {
     yLength = targetY - mouseY;
   }
   if (sqrt(sq(xLength)+sq(yLength)) < 80) {
-    hitTarget7=true;
+    onTarget7=true;
   } else {
-    hitTarget7=false;
+    onTarget7=false;
   }
 
   if (mouseX > targetX) {
@@ -160,9 +161,9 @@ void hitTarget() {
     yLength = targetY - mouseY;
   }
   if (sqrt(sq(xLength)+sq(yLength)) < 60) {
-    hitTarget8=true;
+    onTarget8=true;
   } else {
-    hitTarget8=false;
+    onTarget8=false;
   }
 
   if (mouseX > targetX) {
@@ -176,9 +177,9 @@ void hitTarget() {
     yLength = targetY - mouseY;
   }
   if (sqrt(sq(xLength)+sq(yLength)) < 40) {
-    hitTarget9=true;
+    onTarget9=true;
   } else {
-    hitTarget9=false;
+    onTarget9=false;
   }
 
   if (mouseX > targetX) {
@@ -192,41 +193,59 @@ void hitTarget() {
     yLength = targetY - mouseY;
   }
   if (sqrt(sq(xLength)+sq(yLength)) < 20) {
-    hitTarget10=true;
+    onTarget10=true;
   } else {
-    hitTarget10=false;
+    onTarget10=false;
   }
 }
 //
-void ifTargetHit() {
-  if (mouseButton==LEFT && hitTarget1==true) {
+void targetHitText() {
+  if (hitTarget1==true) {
+    //AppleSDGothicNeo-Heavy-48
+    fill(red);
+    text("+1", targetX+width*1/6, targetY-height*1/10);
+  }
+}
+//
+void targetHitScore() {
+  if (mouseButton==LEFT && onTarget1==true) {
     score+=1;
+    hitTarget1=true;
   }
-  if (mouseButton==LEFT && hitTarget2==true) {
-    score+=2;
+  if (mouseButton==LEFT && onTarget2==true) {
+    score+=1;
+    hitTarget2=true;
   }
-  if (mouseButton==LEFT && hitTarget3==true) {
-    score+=3;
+  if (mouseButton==LEFT && onTarget3==true) {
+    score+=1;
+    hitTarget3=true;
   }
-  if (mouseButton==LEFT && hitTarget4==true) {
-    score+=4;
+  if (mouseButton==LEFT && onTarget4==true) {
+    score+=1;
+    hitTarget4=true;
   }
-  if (mouseButton==LEFT && hitTarget5==true) {
-    score+=5;
+  if (mouseButton==LEFT && onTarget5==true) {
+    score+=1;
+    hitTarget5=true;
   }
-  if (mouseButton==LEFT && hitTarget6==true) {
-    score+=6;
+  if (mouseButton==LEFT && onTarget6==true) {
+    score+=1;
+    hitTarget6=true;
   }
-  if (mouseButton==LEFT && hitTarget7==true) {
-    score+=7;
+  if (mouseButton==LEFT && onTarget7==true) {
+    score+=1;
+    hitTarget7=true;
   }
-  if (mouseButton==LEFT && hitTarget8==true) {
-    score+=8;
+  if (mouseButton==LEFT && onTarget8==true) {
+    score+=1;
+    hitTarget8=true;
   }
-  if (mouseButton==LEFT && hitTarget9==true) {
-    score+=9;
+  if (mouseButton==LEFT && onTarget9==true) {
+    score+=1;
+    hitTarget9=true;
   }
-  if (mouseButton==LEFT && hitTarget10==true) {
-    score+=10;
+  if (mouseButton==LEFT && onTarget10==true) {
+    score+=1;
+    hitTarget10=true;
   }
 }
