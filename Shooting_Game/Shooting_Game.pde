@@ -27,6 +27,8 @@ void setup() {
 }
 //END setup
 void draw() {
+  String[] fontList = PFont.list();
+  printArray(fontList);
   if (inHomeScreen==true) {
     cursor(ARROW);
     homeScreen();
