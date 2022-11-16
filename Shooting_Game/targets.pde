@@ -1,3 +1,4 @@
+PFont AppleSDGothicNeoHeavy48;
 float targetX, targetY;
 float target1, target2, target3, target4, target5, target6, target7, target8, target9, target10;
 float xLength, yLength;
@@ -200,52 +201,96 @@ void targetPythagorasTheorem() {
 }
 //
 void targetHitText() {
-  if (hitTarget1==true) {
-    //AppleSDGothicNeo-Heavy-48
-    fill(red);
-    text("+1", targetX+width*1/6, targetY-height*1/10);
-  }
+  AppleSDGothicNeoHeavy48 = createFont("AppleSDGothicNeo-Heavy-48", 50);
 }
 //
 void targetHitScore() {
   if (mouseButton==LEFT && onTarget1==true) {
     score+=1;
-    hitTarget1=true;
+    if (onTarget2==false && onTarget3==false && onTarget4==false && onTarget5==false && onTarget6==false && onTarget7==false && onTarget8==false && onTarget9==false && onTarget10==false) {
+      textFont(AppleSDGothicNeoHeavy48);
+      fill(red);
+      text("+1", targetX+width*1/6, targetY-height*1/10);
+      hitTarget1=true;
+    }
   }
   if (mouseButton==LEFT && onTarget2==true) {
     score+=1;
-    hitTarget2=true;
+    if (onTarget3==false && onTarget4==false && onTarget5==false && onTarget6==false && onTarget7==false && onTarget8==false && onTarget9==false && onTarget10==false) {
+      textFont(AppleSDGothicNeoHeavy48);
+      fill(red);
+      text("+2", targetX+width*1/6, targetY-height*1/10);
+      hitTarget2=true;
+    }
   }
   if (mouseButton==LEFT && onTarget3==true) {
     score+=1;
-    hitTarget3=true;
+    if (onTarget4==false && onTarget5==false && onTarget6==false && onTarget7==false && onTarget8==false && onTarget9==false && onTarget10==false) {
+      textFont(AppleSDGothicNeoHeavy48);
+      fill(red);
+      text("+3", targetX+width*1/6, targetY-height*1/10);
+      hitTarget3=true;
+    }
   }
   if (mouseButton==LEFT && onTarget4==true) {
     score+=1;
-    hitTarget4=true;
+    if (onTarget5==false && onTarget6==false && onTarget7==false && onTarget8==false && onTarget9==false && onTarget10==false) {
+      textFont(AppleSDGothicNeoHeavy48);
+      fill(red);
+      text("+4", targetX+width*1/6, targetY-height*1/10);
+      hitTarget4=true;
+    }
   }
   if (mouseButton==LEFT && onTarget5==true) {
     score+=1;
-    hitTarget5=true;
+    if (onTarget6==false && onTarget7==false && onTarget8==false && onTarget9==false && onTarget10==false) {
+      textFont(AppleSDGothicNeoHeavy48);
+      fill(red);
+      text("+5", targetX+width*1/6, targetY-height*1/10);
+      hitTarget5=true;
+    }
   }
   if (mouseButton==LEFT && onTarget6==true) {
     score+=1;
-    hitTarget6=true;
+    if (onTarget7==false && onTarget8==false && onTarget9==false && onTarget10==false) {
+      textFont(AppleSDGothicNeoHeavy48);
+      fill(red);
+      text("+6", targetX+width*1/6, targetY-height*1/10);
+      hitTarget6=true;
+    }
   }
   if (mouseButton==LEFT && onTarget7==true) {
     score+=1;
-    hitTarget7=true;
+    if (onTarget8==false && onTarget9==false && onTarget10==false) {
+      textFont(AppleSDGothicNeoHeavy48);
+      fill(red);
+      text("+7", targetX+width*1/6, targetY-height*1/10);
+      hitTarget7=true;
+    }
   }
   if (mouseButton==LEFT && onTarget8==true) {
     score+=1;
-    hitTarget8=true;
+    if (onTarget9==false && onTarget10==false) {
+      textFont(AppleSDGothicNeoHeavy48);
+      fill(red);
+      text("+8", targetX+width*1/6, targetY-height*1/10);
+      hitTarget8=true;
+    }
   }
   if (mouseButton==LEFT && onTarget9==true) {
     score+=1;
-    hitTarget9=true;
+    if (onTarget10==false) {
+      textFont(AppleSDGothicNeoHeavy48);
+      fill(red);
+      text("+9", targetX+width*1/6, targetY-height*1/10);
+      hitTarget9=true;
+    }
   }
   if (mouseButton==LEFT && onTarget10==true) {
     score+=1;
+    textFont(AppleSDGothicNeoHeavy48);
+    fill(red);
+    text("+10", targetX+width*1/6, targetY-height*1/10);
     hitTarget10=true;
   }
 }

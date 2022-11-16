@@ -10,6 +10,7 @@ Minim minim;
 Boolean gameStart=false, inHomeScreen=true;
 //
 void setup() {
+  frameRate(10);
   fullScreen();
   println(width, "x", height);
   String ls="Landscape or Square", p="Portrait", DO="Display Orientation:", instruct="Please tilt your device";
@@ -44,6 +45,7 @@ void draw() {
     targets();
     movingGunImage();
     targetPythagorasTheorem();
+    targetHitText();
   }
 }
 //END draw
@@ -54,5 +56,6 @@ void keyPressed() {
 void mousePressed() {
   firedAmmoMousePressed();
   targetHitScore();
+  //targetHitText();
 }
 //END mousePressed
