@@ -56,6 +56,5 @@ void keyPressed() {
 void mousePressed() {
   firedAmmoMousePressed();
   targetHitScore();
-  //targetHitText();
 }
 //END mousePressed
