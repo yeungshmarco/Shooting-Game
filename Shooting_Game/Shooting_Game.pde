@@ -33,6 +33,7 @@ void draw() {
   if (inHomeScreen==true) {
     cursor(ARROW);
     homeScreen();
+    playButton();
   }
   /*if (showLoadingScreen==true) {
     showLoadingScreen();
@@ -46,6 +47,7 @@ void draw() {
     movingGunImage();
     targetPythagorasTheorem();
     targetHitText();
+    settingsButton();
   }
 }
 //END draw
@@ -56,5 +58,6 @@ void keyPressed() {
 void mousePressed() {
   firedAmmoMousePressed();
   targetHitScore();
+  playButtonMousePressed();
 }
 //END mousePressed

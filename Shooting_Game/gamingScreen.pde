@@ -1,5 +1,5 @@
 PFont TimesNewRomanPSBoldMT;
-PImage sniperGun, gamingScreenShootingRange1, gamingScreenShootingBench, bulletHole;
+PImage sniperGun, gamingScreenShootingRange1, gamingScreenShootingBench, bulletHole, settingsButton;
 float sniperGunX, sniperGunY, sniperGunWidth, sniperGunHeight;
 float bulletHoleX, bulletHoleY, bulletHoleWidth, bulletHoleHeight;
 int score=0;
@@ -51,4 +51,12 @@ void bulletHole() {
     bulletHole = loadImage("bulletHole.png");
     image(bulletHole, bulletHoleX, bulletHoleY, bulletHoleWidth, bulletHoleHeight);
     imageMode(CORNER);
+}
+//
+void settingsButton() {
+  //return to home screen/quit
+  fill(white);
+  rect(width*19/20, 0, width*1/20, width*1/20, 16);
+  settingsButton = loadImage("84059.png");
+  image(settingsButton, width*19/20, 0, width*1/20, width*1/20);
 }
