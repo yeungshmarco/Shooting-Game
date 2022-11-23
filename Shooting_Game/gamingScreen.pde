@@ -42,7 +42,7 @@ void firedAmmoMousePressed() {
   }
 }
 //
-void bulletHole() {
+void bulletHole() {//set mousepressed
     bulletHoleX = mouseX;
     bulletHoleY = mouseY;
     bulletHoleWidth = width*1/30;
