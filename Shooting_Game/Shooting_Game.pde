@@ -38,16 +38,16 @@ void draw() {
   /*if (showLoadingScreen==true) {
     showLoadingScreen();
   }*/
+  gameStartSettings();
+  if (settingsScreen==true) {
+    settingsScreen();
+  }
+  //
   if (gameStart==true) {
     inHomeScreen=false;
     //showLoadingScreen=false;
     cursor(CROSS);
     gamingScreen();
-    targets();
-    movingGunImage();
-    targetPythagorasTheorem();
-    targetHitText();
-    settingsButton();
   }
 }
 //END draw
@@ -59,5 +59,6 @@ void mousePressed() {
   firedAmmoMousePressed();
   targetHitScore();
   playButtonMousePressed();
+  settingsButtonMousePressed();
 }
 //END mousePressed

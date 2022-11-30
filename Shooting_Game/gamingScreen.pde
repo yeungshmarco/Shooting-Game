@@ -12,12 +12,17 @@ void gamingScreen() {
   image(gamingScreenShootingBench, 0, height*1/3, width, height*2/3);
   gamingScreenShootingRange1 = loadImage("gamingScreenShootingRange1.jpeg"); //540 x 360
   image(gamingScreenShootingRange1, 0, 0, width, height*77/100);
-  textAlign(CENTER,CENTER);
+  textAlign(CENTER, CENTER);
   fill(white);
   textFont(TimesNewRomanPSBoldMT, 40);
   stroke(3);
   text("Score:", width*1100/1440, height*45/900);
   text(score, width*1200/1440, height*48/900);
+  targets();
+  movingGunImage();
+  targetPythagorasTheorem();
+  targetHitText();
+  settingsButton();
 }
 //
 void movingGunImage() {
@@ -30,7 +35,7 @@ void movingGunImage() {
 }
 //
 void firedAmmoMousePressed() {
-  if (gameStart==true) {
+  if (gameStart==true && settingsScreen==false) {
     if (mouseButton==LEFT) {
       bulletHole();
       gunshotSoundEffect.rewind();
@@ -43,14 +48,14 @@ void firedAmmoMousePressed() {
 }
 //
 void bulletHole() {//set mousepressed
-    bulletHoleX = mouseX;
-    bulletHoleY = mouseY;
-    bulletHoleWidth = width*1/30;
-    bulletHoleHeight = width*1/30;
-    imageMode(CENTER);
-    bulletHole = loadImage("bulletHole.png");
-    image(bulletHole, bulletHoleX, bulletHoleY, bulletHoleWidth, bulletHoleHeight);
-    imageMode(CORNER);
+  bulletHoleX = mouseX;
+  bulletHoleY = mouseY;
+  bulletHoleWidth = width*1/30;
+  bulletHoleHeight = width*1/30;
+  imageMode(CENTER);
+  bulletHole = loadImage("bulletHole.png");
+  image(bulletHole, bulletHoleX, bulletHoleY, bulletHoleWidth, bulletHoleHeight);
+  imageMode(CORNER);
 }
 //
 void settingsButton() {
