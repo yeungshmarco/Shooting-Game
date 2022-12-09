@@ -38,7 +38,7 @@ void draw() {
   /*if (showLoadingScreen==true) {
     showLoadingScreen();
   }*/
-  gameStartSettings();
+  //gameStartSettings();
   if (settingsScreen==true) {
     settingsScreen();
   }
@@ -49,6 +49,7 @@ void draw() {
     cursor(CROSS);
     gamingScreen();
   }
+  quitButton();
 }
 //END draw
 void keyPressed() {
@@ -60,5 +61,6 @@ void mousePressed() {
   targetHitScore();
   playButtonMousePressed();
   settingsButtonMousePressed();
+  quitButtonMousePressed();
 }
 //END mousePressed

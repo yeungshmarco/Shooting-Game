@@ -4,7 +4,7 @@ void settingsButtonMousePressed() {
   if (gameStart==true && mouseX>width*19/20 && mouseX<width && mouseY>0 && mouseY<width*1/20) {
     if (mouseButton==LEFT) {
       settingsScreen=true;
-    } else if (settingsScreen==true) {
+    } else if (settingsScreen=true) {
       settingsScreen=false;
     } else {
       settingsScreen=true;
@@ -20,7 +20,7 @@ void settingsScreen() {
     gamingScreen();
   }
 }
-//
+/*
 void gameStartSettings() {
   if (settingsScreen=true) {
     gameStart=false;
@@ -28,3 +28,4 @@ void gameStartSettings() {
     gameStart=true;
   }
 }
+*/
