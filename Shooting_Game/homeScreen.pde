@@ -1,4 +1,4 @@
-PImage homeScreenBackground, startGameGun1, playTextImage;
+PImage homeScreenBackground, startGameGun1, playTextImage, quitTextHSImage;
 Boolean showLoadingScreen=false;
 
 void homeScreen() {
@@ -9,6 +9,13 @@ void homeScreen() {
   rotate(startGameGun1Angle);
   image(startGameGun1, 0, height*4/5, width*1/6, height*1/10);
   rotate(radians(380));
+  fill(black);
+  stroke(white);
+  //rect(width*4/10, height*27/40, width*2/10, height*4/20);
+  rect(width*9/20, height*28/40, width*1/10, height*2/40);
+  rect(width*9/20, height*32/40, width*1/10, height*2/40);
+  playButton();
+  quitButtonHS();
 }
 //
 void startGameKeyPressed() {
@@ -18,15 +25,23 @@ void startGameKeyPressed() {
 }
 //
 void playButton() {
-  fill(black);
-  stroke(white);
-  rect(width*7/10, height*9/20, width*2/10, height*2/20);
   playTextImage = loadImage("playtext-removebg-preview.png");
-  image(playTextImage, width*7/10, height*17/40, width*2/10, height*6/40);
+  image(playTextImage, width*4/10, height*26/40, width*2/10, height*6/40);
+}
+//
+void quitButtonHS() {
+  quitTextHSImage = loadImage("Exit-removebg-preview.png");
+  image(quitTextHSImage, width*4/10, height*30/40, width*2/10, height*6/40);
 }
 //
 void playButtonMousePressed() {
-  if(inHomeScreen==true && mouseX>width*7/10 && mouseX<width*9/10 && mouseY>height*17/40 && mouseY<height*23/40) {
+  if(inHomeScreen==true && mouseButton==LEFT && mouseX>width*9/20 && mouseX<width*11/20 && mouseY>height*28/40 && mouseY<height*30/40) {
     gameStart=true;
+  }
+}
+//
+void quitButtonHSMousePressed() {
+  if(inHomeScreen==true && mouseButton==LEFT && mouseX>width*9/20 && mouseX<width*11/20 && mouseY>height*32/40 && mouseY<height*34/40) {
+    exit();
   }
 }

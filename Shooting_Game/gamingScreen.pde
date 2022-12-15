@@ -26,6 +26,7 @@ void gamingScreen() {
   targetPythagorasTheorem();
   targetHitText();
   settingsButton();
+  quitButton();
 }
 //
 void movingGunImage() {
@@ -77,7 +78,7 @@ void quitButton() {
 }
 //
 void quitButtonMousePressed() {
-  if (mouseButton==LEFT && mouseX>0 && mouseX<width*1/20 && mouseY>0 && mouseY<width*1/20) {
+  if (gameStart==true && mouseButton==LEFT && mouseX>0 && mouseX<width*1/20 && mouseY>0 && mouseY<width*1/20) {
     exit();
   }
 }

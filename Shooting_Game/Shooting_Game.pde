@@ -33,7 +33,6 @@ void draw() {
   if (inHomeScreen==true) {
     cursor(ARROW);
     homeScreen();
-    playButton();
   }
   /*if (showLoadingScreen==true) {
     showLoadingScreen();
@@ -49,7 +48,6 @@ void draw() {
     cursor(CROSS);
     gamingScreen();
   }
-  quitButton();
 }
 //END draw
 void keyPressed() {
@@ -60,6 +58,7 @@ void mousePressed() {
   firedAmmoMousePressed();
   targetHitScore();
   playButtonMousePressed();
+  quitButtonHSMousePressed();
   settingsButtonMousePressed();
   quitButtonMousePressed();
 }
