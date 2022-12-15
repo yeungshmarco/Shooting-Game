@@ -82,3 +82,11 @@ void quitButtonMousePressed() {
     exit();
   }
 }
+//
+void returnHomeButton() {
+  if (gameStart==true && mouseX>width*19/20 && mouseX<width && mouseY>0 && mouseY<width*1/20) {
+    inHomeScreen=true;
+    gameStart=false;
+    score = 0;
+  }
+}

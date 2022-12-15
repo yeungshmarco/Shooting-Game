@@ -59,7 +59,8 @@ void mousePressed() {
   targetHitScore();
   playButtonMousePressed();
   quitButtonHSMousePressed();
-  settingsButtonMousePressed();
+  //settingsButtonMousePressed();
   quitButtonMousePressed();
+  returnHomeButton();
 }
 //END mousePressed
