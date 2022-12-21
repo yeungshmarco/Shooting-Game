@@ -62,5 +62,6 @@ void mousePressed() {
   //settingsButtonMousePressed();
   quitButtonMousePressed();
   returnHomeMousePressed();
+  resetButtonMousePressed();
 }
 //END mousePressed

@@ -75,8 +75,8 @@ void resetButton() {
   //resetScore
   fill(white);
   rect(width*18/20, 0, width*1/20, width*1/20, 16);
-  resetButton = loadImage("returnHomeButton.png");
-  image(resetButton, width*18/20, 0, width*1/20, width*1/20);
+  resetButton = loadImage("resetButton.png");
+  image(resetButton, width*18.1/20, width*0.1/20, width*0.8/20, width*0.8/20);
 }
 //
 void quitButton() {
@@ -96,6 +96,11 @@ void returnHomeMousePressed() {
   if (gameStart==true && mouseX>width*19/20 && mouseX<width && mouseY>0 && mouseY<width*1/20) {
     inHomeScreen=true;
     gameStart=false;
+  }
+}
+//
+void resetButtonMousePressed() {
+  if (gameStart==true && mouseX>width*18/20 && mouseX<width*19/20 && mouseY>0 && mouseY<width*1/20) {
     score = 0;
   }
 }
