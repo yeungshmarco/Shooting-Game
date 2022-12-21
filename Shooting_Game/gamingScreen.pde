@@ -1,5 +1,5 @@
 PFont TimesNewRomanPSBoldMT;
-PImage sniperGun, gamingScreenShootingRange1, gamingScreenShootingBench, bulletHole, settingsButton, quitButton;
+PImage sniperGun, gamingScreenShootingRange1, gamingScreenShootingBench, bulletHole, returnHomeButton, quitButton, resetButton;
 float sniperGunX, sniperGunY, sniperGunWidth, sniperGunHeight;
 float bulletHoleX, bulletHoleY, bulletHoleWidth, bulletHoleHeight;
 int score=0;
@@ -25,7 +25,8 @@ void gamingScreen() {
   movingGunImage();
   targetPythagorasTheorem();
   targetHitText();
-  settingsButton();
+  returnHomeButton();
+  resetButton();
   quitButton();
 }
 //
@@ -39,7 +40,7 @@ void movingGunImage() {
 }
 //
 void firedAmmoMousePressed() {
-  if (gameStart==true) {
+  if (gameStart==true && mouseY>height*1/15) {
     if (mouseButton==LEFT) {
       bulletHole();
       gunshotSoundEffect.rewind();
@@ -51,7 +52,7 @@ void firedAmmoMousePressed() {
   }
 }
 //
-void bulletHole() {//set mousepressed
+void bulletHole() {
   bulletHoleX = mouseX;
   bulletHoleY = mouseY;
   bulletHoleWidth = width*1/30;
@@ -62,12 +63,20 @@ void bulletHole() {//set mousepressed
   imageMode(CORNER);
 }
 //
-void settingsButton() {
+void returnHomeButton() {
   //return to home screen/quit
   fill(white);
   rect(width*19/20, 0, width*1/20, width*1/20, 16);
-  settingsButton = loadImage("84059.png");
-  image(settingsButton, width*19/20, 0, width*1/20, width*1/20);
+  returnHomeButton = loadImage("returnHomeButton.png");
+  image(returnHomeButton, width*19/20, width*1/400, width*1/20, width*1/20);
+}
+//
+void resetButton() {
+  //resetScore
+  fill(white);
+  rect(width*18/20, 0, width*1/20, width*1/20, 16);
+  resetButton = loadImage("returnHomeButton.png");
+  image(resetButton, width*18/20, 0, width*1/20, width*1/20);
 }
 //
 void quitButton() {
@@ -83,7 +92,7 @@ void quitButtonMousePressed() {
   }
 }
 //
-void returnHomeButton() {
+void returnHomeMousePressed() {
   if (gameStart==true && mouseX>width*19/20 && mouseX<width && mouseY>0 && mouseY<width*1/20) {
     inHomeScreen=true;
     gameStart=false;
