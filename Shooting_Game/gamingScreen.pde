@@ -3,7 +3,7 @@ PImage sniperGun, gamingScreenShootingRange1, gamingScreenShootingBench, bulletH
 float sniperGunX, sniperGunY, sniperGunWidth, sniperGunHeight;
 float bulletHoleX, bulletHoleY, bulletHoleWidth, bulletHoleHeight;
 int score=0;
-Boolean ifGunFiredMousePressed=false;
+Boolean ifGunFiredMousePressed=false, resetButtonPressed=false;
 //
 void gamingScreen() {
   TimesNewRomanPSBoldMT = createFont("TimesNewRomanPS-BoldMT", 601);

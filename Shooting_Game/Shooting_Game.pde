@@ -10,7 +10,6 @@ Minim minim;
 Boolean gameStart=false, inHomeScreen=true;
 //
 void setup() {
-  frameRate(10);
   fullScreen();
   println(width, "x", height);
   String ls="Landscape or Square", p="Portrait", DO="Display Orientation:", instruct="Please tilt your device";
@@ -35,8 +34,8 @@ void draw() {
     homeScreen();
   }
   /*if (showLoadingScreen==true) {
-    showLoadingScreen();
-  }*/
+   showLoadingScreen();
+   }*/
   //gameStartSettings();
   if (settingsScreen==true) {
     settingsScreen();
@@ -47,6 +46,7 @@ void draw() {
     //showLoadingScreen=false;
     cursor(CROSS);
     gamingScreen();
+    noLoop();
   }
 }
 //END draw
@@ -55,6 +55,7 @@ void keyPressed() {
 }
 //END keyPressed
 void mousePressed() {
+  redraw();
   firedAmmoMousePressed();
   targetHitScore();
   playButtonMousePressed();

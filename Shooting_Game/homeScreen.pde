@@ -56,3 +56,18 @@ void quitButtonHSMousePressed() {
     exit();
   }
 }
+/*
+void recentScore() {
+  if (resetButtonPressed==true && inHomeScreen==true) {
+    fill(black, 190);
+    rect(width*850/1400, height*25/900, width*500/1400, height*50/900, 10);
+    textAlign(CENTER, CENTER);
+    fill(white);
+    textFont(TimesNewRomanPSBoldMT, 40);
+    stroke(3);
+    text("Recent Score: ", width*14/20, height*1/20);
+    textAlign(LEFT, CENTER);
+    text(score, width*1170/1440, height*47/900);
+  }
+}
+*/

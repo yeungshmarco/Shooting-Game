@@ -201,7 +201,7 @@ void targetPythagorasTheorem() {
 }
 //
 void targetHitText() {
-  AppleSDGothicNeoHeavy48 = createFont("AppleSDGothicNeo-Heavy-48", 50);
+  AppleSDGothicNeoHeavy48 = createFont("AppleSDGothicNeo-Heavy", 50);
 }
 //
 void targetHitScore() {
